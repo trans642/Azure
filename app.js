@@ -63,7 +63,6 @@ else if (env === 'production') {
   });
 }
 
-app.listen(3000); // Listen on port 3000
 app.listen(3000, function () {
     console.log("Demo Express server listening on port %d in %s mode", 3000, app.settings.env);
 });
