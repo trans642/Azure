@@ -31,7 +31,7 @@ TaskList.prototype = {
 
   completeTask: function(req,res) {
     var completedTasks = req.body;
-	var fnCallback = function updatedTask(err) {
+	  var fnCallback = function updatedTask(err) {
 			          if(err) {
 			            throw err;
 			          }
