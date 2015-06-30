@@ -27,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', taskList.showTasks.bind(taskList));
-//app.get('/users', taskList.showTasks.bind(taskList));
+app.use('/users', users);
 app.post('/addtask', taskList.addTask.bind(taskList));
 app.post('/completetask', taskList.completeTask.bind(taskList));
 
