@@ -12,9 +12,10 @@ var TaskList = require('./routes/tasklist');
 var taskList = new TaskList(process.env.CUSTOMCONNSTR_MONGOLAB_URI);
 
 var app = express();
-console.log('test from server');
+
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+//app.set('views', path.join(__dirname, 'views'));
+app.set('views', __dirname + '/views'); 
 app.set('view engine', 'jade');
 app.set('view options', { layout: false });
 
