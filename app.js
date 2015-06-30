@@ -4,11 +4,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var methodOverride = require("method-override");
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var TaskList = require('./routes/tasklist');
+
 var taskList = new TaskList(process.env.CUSTOMCONNSTR_MONGOLAB_URI);
 
 var app = express();
