@@ -9,9 +9,12 @@ function TaskList(connection) {
 
 TaskList.prototype = {
   showTasks: function(req, res) {
+    res.render('index', { title: 'My ToDo List2', tasks: [] });
+    /*
     task.find({ itemCompleted : false }, function foundTasks(err, items) {
         res.render('index', { title: 'My ToDo List', tasks: items });
     });
+    */
   },
 
   addTask: function(req,res) {
