@@ -1,7 +1,8 @@
 extends layout
 
-
-
+block mainContent
+h1 title
+    
 form(action="/completetask", method="post")
   table(border="1")
     tr
@@ -32,4 +33,6 @@ form(action="/addtask", method="post")
       td
         input(name="itemCategory", type="textbox")
   input(type="submit", value="Add item")
-block content
+
+block end
+ hr  
