@@ -1,10 +1,10 @@
 extends layout
 
-mixin pet(name)
+mixin pet(task)
     - var day   = task.itemDate.getDate();
     - var month = task.itemDate.getMonth() + 1;
     - var year  = task.itemDate.getFullYear();
-    td= day
+    td= month + "/" + day + "/" + year
   
 block mainContent
     h1 title
