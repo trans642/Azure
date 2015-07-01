@@ -1,7 +1,10 @@
 extends layout
 
 mixin pet(name)
-  td=name
+    - var day   = task.itemDate.getDate();
+    - var month = task.itemDate.getMonth() + 1;
+    - var year  = task.itemDate.getFullYear();
+    td #{month + "/" + day + "/" + year}
   
 block mainContent
     h1 title
@@ -22,7 +25,7 @@ block mainContent
             - var month = task.itemDate.getMonth() + 1;
             - var year  = task.itemDate.getFullYear();
             td #{month + "/" + day + "/" + year}
-            +pet(task.itemName)
+            +pet(task)
             td
               input(type="checkbox", name="#{task._id}", value="#{!task.itemCompleted}", checked=task.itemCompleted)
       input(type="submit", value="Update tasks")
